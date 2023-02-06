@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Emblema+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.VideoContent{
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+
+.VideoContent>video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.VideoContent_hidden{
+  position: absolute;
+  visibility: hidden;
+}
+
+header{
+  margin-top: 2rem;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 1;
+}
+
+nav{
+  width: 80%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+}
+
+.navContent{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.NavLogo>img{
+  width: 100%;
+  height: 50px;
+}
+
+.Menu_Content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  pointer-events: none;
+}
+
+.ScrollVideo {
+  height: 100vh;
+}
+
+.ScrollVideo>video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.ScrollVideo>img {
+  position: absolute;
+  width: 20%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  z-index: 1;
+}
+
+.ring_Content{
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  z-index: 2;
+  bottom: 5%;
+  left: 47%;
+}
+
+.title{
+	position: relative;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 0.9rem;
+	text-align: center;
+  color: #ffffff;
+}
+
+.Down{
+	position: relative;
+	font-weight: 300;
+	font-size: 1.6rem;
+	bottom: 15%;
+	color: #ffffff;
+  animation: rebote 2s linear infinite;
+}
+
+@keyframes rebote{
+    0%{
+        top: -5px;
+    }
+    50%{
+        top: 10px;
+    }
+    100%{
+        top: -5px;
+    }
+}
+
+.btnCont{
+  width: 100%;
+  position: fixed;
+  top: 20px;
+  left: 46%;
+  z-index: 2;
+}
+
+.StarBtn{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+}
+
+.btn{
+  position: relative;
+  width: 9%;
+  border-radius: 50%;
+}
+
+.btn>video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

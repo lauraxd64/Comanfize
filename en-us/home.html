@@ -1,0 +1,2593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Comanfize</title>
+    <link rel="stylesheet" href="/assets/css/components.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/music-anim.css">
+</head>
+<body>
+    <canvas class="experience"></canvas>
+    <div class="scrollTarget"></div>
+    <div class="vignette-radial"></div>
+
+    <div class="scroll-info">
+        <p></p>
+    </div>
+
+    <div class='nav'>
+      <div class="nav-logo">
+
+      </div>
+      <div class="nav-title">
+        Solar explorer
+        <span>in Comanfize</span>
+      </div>
+      <div class="nav-links">
+        <img src="/assets/icons/fb.svg" alt="">
+        <img src="/assets/icons/insta.svg" alt="">
+        <img src="/assets/icons/twitter.svg" alt="">
+        <img src="/assets/icons/headphone.svg" alt="">
+        <div class="now playing" id="music">
+          <span class="bar n1">A</span>
+          <span class="bar n2">B</span>
+          <span class="bar n3">c</span>
+        </div>
+      </div>
+      </div>
+      <input class='planet9' id='pluto' name='planet' type='radio'>
+      <label class='pluto menu' for='pluto'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Pluto
+          </h2>
+          <h3>39.5 AU</h3>
+        </div>
+      </label>
+      <input class='planet8' id='neptune' name='planet' type='radio'>
+      <label class='neptune menu' for='neptune'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Neptune
+          </h2>
+          <h3>30.06 AU</h3>
+        </div>
+      </label>
+      <input class='planet7' id='uranus' name='planet' type='radio'>
+      <label class='uranus menu' for='uranus'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Uranus
+          </h2>
+          <h3>19.18 AU</h3>
+        </div>
+      </label>
+      <input class='planet6' id='saturn' name='planet' type='radio'>
+      <label class='saturn menu' for='saturn'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Contact US
+          </h2>
+          <h3>9.539 AU</h3>
+        </div>
+      </label>
+      <input class='planet5' id='jupiter' name='planet' type='radio'>
+      <label class='jupiter menu' for='jupiter'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Team
+          </h2>
+          <h3>5.203 AU</h3>
+        </div>
+      </label>
+      <input checked='checked' class='planet4' id='mars' name='planet' type='radio'>
+      <label class='menu mars' for='mars'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Portofolio
+          </h2>
+          <h3>1.524 AU</h3>
+        </div>
+      </label>
+      <input checked='checked' class='planet3' id='earth' name='planet' type='radio'>
+      <label class='menu earth' for='earth'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Services
+          </h2>
+          <h3>1 AU</h3>
+        </div>
+      </label>
+      <input checked='checked' class='planet2' id='venus' name='planet' type='radio'>
+      <label class='menu venus' for='venus'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            About
+          </h2>
+          <h3>0.723 AU</h3>
+        </div>
+      </label>
+      <input checked='checked' class='planet1' id='mercury' name='planet' type='radio'>
+      <label class='menu mercury' for='mercury'>
+        <div class='preview'></div>
+        <div class='info'>
+          <h2>
+            <div class='pip'></div>
+            Home
+          </h2>
+          <h3>0.39 AU</h3>
+        </div>
+      </label>
+      <div class='solar'>
+        <div class='solar_systm'>
+          <div class='planet mercury'>
+            <div class='planet_description mercury'>
+              <h2>Mercury</h2>
+              <h1>Home</h1>
+              <label for='readMercury'>
+                <a>
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet venus'>
+            <div class='planet_description venus'>
+              <h2>Venus</h2>
+              <h1>About</h1>
+              <label for='readVenus'>
+                <a>
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet earth'>
+            <div class='moon moon'>
+              <h3>Moon</h3>
+              <h2>Moon</h2>
+            </div>
+            <div class='trajectory m'></div>
+            <div class='planet_description earth'>
+              <h2>Earth</h2>
+              <h1>Services</h1>
+              <label for='readEarth'>
+                <a>
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet mars'>
+            <div class='moon deimos'>
+              <h3>Moon</h3>
+              <h2>Deimos</h2>
+            </div>
+            <div class='trajectory d'></div>
+            <div class='moon phoebos'>
+              <h3>Moon</h3>
+              <h2>Phoebos</h2>
+            </div>
+            <div class='trajectory p'></div>
+            <div class='planet_description mars'>
+              <h2>Mars</h2>
+              <h1>Portofolio</h1>
+              <label for='readMars'>
+                <a>
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet jupiter'>
+            <div class='moon lo'>
+              <h3>Moon</h3>
+              <h2>Io</h2>
+            </div>
+            <div class='moon europa'>
+              <h3>Moon</h3>
+              <h2>Europa</h2>
+            </div>
+            <div class='moon ganymede'>
+              <h3>Moon</h3>
+              <h2>Ganymede</h2>
+            </div>
+            <div class='trajectory lop'></div>
+            <div class='trajectory eu'></div>
+            <div class='trajectory ga'></div>
+            <div class='planet_description jupiter'>
+              <h2>Jupiter</h2>
+              <h1>Team</h1>
+              <label for='readJupiter'>
+                <a>
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet saturn'>
+            <div class='moon titan'>
+              <h3>Moon</h3>
+              <h2>Titan</h2>
+            </div>
+            <div class='moon dione'>
+              <h3>Moon</h3>
+              <h2>Dione</h2>
+            </div>
+            <div class='moon enceladus'>
+              <h3>Moon</h3>
+              <h2>Enceladus</h2>
+            </div>
+            <div class='trajectory ti'></div>
+            <div class='trajectory di'></div>
+            <div class='trajectory enc'></div>
+            <div class='planet_description saturn'>
+              <h2>Saturn</h2>
+              <h1>Contact Us</h1>
+              <label for='readSaturn'>
+                <a href="saturn.html">
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet uranus'>
+            <div class='moon miranda'>
+              <h3>Moon</h3>
+              <h2>Miranda</h2>
+            </div>
+            <div class='moon ariel'>
+              <h3>Moon</h3>
+              <h2>Ariel</h2>
+            </div>
+            <div class='moon umbriel'>
+              <h3>Moon</h3>
+              <h2>Umbriel</h2>
+            </div>
+            <div class='trajectory mir'></div>
+            <div class='trajectory ari'></div>
+            <div class='trajectory umb'></div>
+            <div class='planet_description uranus'>
+              <h2>Uranus</h2>
+              <h1>Section name</h1>
+              <label for='readUranus'>
+                <a href="uranus.html">
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet neptune'>
+            <div class='moon triton'>
+              <h3>Moon</h3>
+              <h2>Triton</h2>
+            </div>
+            <div class='moon proteus'>
+              <h3>Moon</h3>
+              <h2>Proteus</h2>
+            </div>
+            <div class='moon nereid'>
+              <h3>Moon</h3>
+              <h2>Nereid</h2>
+            </div>
+            <div class='trajectory tri'></div>
+            <div class='trajectory pro'></div>
+            <div class='trajectory ner'></div>
+            <div class='planet_description neptune'>
+              <h2>Neptune</h2>
+              <h1>Section name</h1>
+              <label for='readNeptune'>
+                <a href="neptune.html">
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+        <div class='solar_systm'>
+          <div class='planet pluto'>
+            <div class='planet_description pluto'>
+              <h2>Pluto</h2>
+              <h1>Section name</h1>
+              <label for='readPluto'>
+                <a href="pluto.html">
+                  Scroll down
+                </a>
+              </label>
+            </div>
+            <div class='overlay'></div>
+          </div>
+        </div>
+      </div>
+      <!--
+              <input class='read' id='readMercury' name='mercuryRead' type='radio'>
+      <label class='closeBig' for='closeMercury'></label>
+      <input class='read' id='closeMercury' name='mercuryRead' type='radio'>
+      <div class='panel'>
+        <h1>Mercury</h1>
+        <p>Mercury is the closest planet to the sun. As such, it circles the sun faster than all the other planets, which is why Romans named it after their swift-footed messenger god.</p>
+        <p>The Sumerians also knew of Mercury since at least 5,000 years ago. It was often associated with Nabu, the god of writing. Mercury was also given separate names for its appearance as both a morning star and as an evening star. Greek astronomers knew, however, that the two names referred to the same body, and Heraclitus, around 500 B.C., correctly thought that both Mercury and Venus orbited the sun, not Earth.</p>
+        <img src='https://i2.wp.com/www.astronomytrek.com/wp-content/uploads/2012/11/mercury-1.jpg?fit=678%2C381&amp;ssl=1'>
+        <h2>A year on Mercury is just 88 days long.</h2>
+        <p>One solar day (the time from noon to noon on the planet’s surface) on Mercury lasts the equivalent of 176 Earth days while the sidereal day (the time for 1 rotation in relation to a fixed point) lasts 59 Earth days. Mercury is nearly tidally locked to the Sun and over time this has slowed the rotation of the planet to almost match its orbit around the Sun. Mercury also has the highest orbital eccentricity of all the planets with its distance from the Sun ranging from 46 to 70 million km.</p>
+        <h2>Mercury is the smallest planet in the Solar Systm.</h2>
+        <p>One of five planets visible with the naked eye a, Mercury is just 4,879 Kilometres across its equator, compared with 12,742 Kilometres for the Earth.</p>
+        <h2>Mercury is the second densest planet.</h2>
+        <p>Even though the planet is small, Mercury is very dense. Each cubic centimetre has a density of 5.4 grams, with only the Earth having a higher density. This is largely due to Mercury being composed mainly of heavy metals and rock.</p>
+        <h2>Mercury has wrinkles.</h2>
+        <p>As the iron core of the planet cooled and contracted, the surface of the planet became wrinkled. Scientist have named these wrinkles, Lobate Scarps. These Scarps can be up to a mile high and hundreds of miles long.</p>
+        <br>
+      </div>
+      <input class='read' id='readVenus' name='venusRead' type='radio'>
+      <label class='closeBig' for='closeVenus'></label>
+      <input class='read' id='closeVenus' name='venusRead' type='radio'>
+      <div class='panel'>
+        <h1>Venus</h1>
+        <p>Venus, the second planet from the sun, is named for the Roman goddess of love and beauty. The planet — the only planet named after a female — may have been named for the most beautiful deity of her pantheon because it shone the brightest of the five planets known to ancient astronomers.</p>
+        <p>In ancient times, Venus was often thought to be two different stars, the evening star and the morning star — that is, the ones that first appeared at sunset and sunrise. In Latin, they were respectively known as Vesper and Lucifer. In Christian times, Lucifer, or "light-bringer," became known as the name of Satan before his fall. However, further observations of Venus in the space age show a very hellish environment. This makes Venus a very difficult planet to observe from up close, because spacecraft do not survive long on its surface.</p>
+        <img src='https://3c1703fe8d.site.internapcdn.net/newman/gfx/news/hires/2014/2-whatistheave.jpg'>
+        <h2>A day on Venus lasts longer than a year.</h2>
+        <p>It takes 243 Earth days to rotate once on its axis (sidereal day). The planet’s orbit around the Sun takes 225 Earth days, compared to the Earth’s 365. A day on the surface of Venus (solar day) takes 117 Earth days.</p>
+        <h2>Venus rotates in the opposite direction to most other planets.</h2>
+        <p>This means that Venus is rotating in the opposite direction to the Sun, this is also know as a retrograde rotation. A possible reason might be a collision in the past with an asteroid or other object that caused the planet to alter its rotational path. It also differs from most other planets in our solar systm by having no natural satellites.</p>
+        <h2>Venus is the second brightest object in the night sky.</h2>
+        <p>Only the Moon is brighter. With a magnitude of between -3.8 to -4.6 Venus is so bright it can be seen during daytime on a clear day.</p>
+        <h2>Atmospheric pressure on Venus is 92 times greater than the Earth’s.</h2>
+        <p>While its size and mass are similar to Earth, the small asteroids are crushed when entering its atmosphere, meaning no small craters lie on the surface of the planet. The pressure felt by a human on the surface would be equivalent to that experienced deep beneath the sea on Earth.</p>
+        <br>
+      </div>
+      <input class='read' id='readEarth' name='earthRead' type='radio'>
+      <label class='closeBig' for='closeEarth'></label>
+      <input class='read' id='closeEarth' name='earthRead' type='radio'>
+      <div class='panel'>
+        <h1>Earth</h1>
+        <p>Earth, our home, is the third planet from the sun. It is the only planet known to have an atmosphere containing free oxygen, oceans of liquid water on its surface, and, of course, life.</p>
+        <p>Earth is the fifth largest of the planets in the solar systm — smaller than the four gas giants, Jupiter, Saturn, Uranusand Neptune, but larger than the three other rocky planets,</p>
+        <img src='https://images.pexels.com/photos/414171/pexels-photo-414171.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=350'>
+        <h2>The Earth’s rotation is gradually slowing.</h2>
+        <p>This deceleration is happening almost imperceptibly, at approximately 17 milliseconds per hundred years, although the rate at which it occurs is not perfectly uniform. This has the effect of lengthening our days, but it happens so slowly that it could be as much as 140 million years before the length of a day will have increased to 25 hours.</p>
+        <h2>The Earth was once believed to be the centre of the universe.</h2>
+        <p>Due to the apparent movements of the Sun and planets in relation to their viewpoint, ancient scientists insisted that the Earth remained static, whilst other celestial bodies travelled in circular orbits around it. Eventually, the view that the Sun was at the centre of the universe was postulated by Copernicus, though this is also not the case.</p>
+        <h2>Earth has a powerful magnetic field.</h2>
+        <p>This phenomenon is caused by the nickel-iron core of the planet, coupled with its rapid rotation. This field protects the Earth from the effects of solar wind.</p>
+        <h2>There is only one natural satellite of the planet Earth.</h2>
+        <p>As a percentage of the size of the body it orbits, the Moon is the largest satellite of any planet in our solar systm. In real terms, however, it is only the fifth largest natural satellite.</p>
+        <br>
+      </div>
+      <input class='read' id='readMars' name='marsRead' type='radio'>
+      <label class='closeBig' for='closeMars'></label>
+      <input class='read' id='closeMars' name='marsRead' type='radio'>
+      <div class='panel'>
+        <h1>Mars</h1>
+        <p>Mars is the fourth planet from the sun. Befitting the red planet's bloody color, the Romans named it after their god of war. The Romans copied the ancient Greeks, who also named the planet after their god of war, Ares. Other civilizations also typically gave the planet names based on its color — for example, the Egyptians named it "Her Desher," meaning "the red one," while ancient Chinese astronomers dubbed it "the fire star."</p>
+        <img src='https://1.bp.blogspot.com/-ou7Je3OVg6U/WYtxDqjNp_I/AAAAAAAACSQ/fsopS5VtFg4bmlv8hQNfiRYfJqTygCotQCLcBGAs/s2048/Martian%2Blandscape%2Bby%2BAmante%2BLombardi.jpg'>
+        <h2>Mars and Earth have approximately the same landmass.</h2>
+        <p>Even though Mars has only 15% of the Earth’s volume and just over 10% of the Earth’s mass, around two thirds of the Earth’s surface is covered in water. Martian surface gravity is only 37% of the Earth’s (meaning you could leap nearly three times higher on Mars).</p>
+        <h2>Mars is home to the tallest mountain in the solar systm.</h2>
+        <p>Olympus Mons, a shield volcano, is 21km high and 600km in diameter. Despite having formed over billions of years, evidence from volcanic lava flows is so recent many scientists believe it could still be active.</p>
+        <h2>Only 18 missions to Mars have been successful.</h2>
+        <p>As of September 2014 there have been 40 missions to Mars, including orbiters, landers and rovers but not counting flybys. The most recent arrivals include the Mars Curiosity mission in 2012, the MAVEN mission, which arrived on September 22, 2014, followed by the Indian Space Research Organization’s MOM Mangalyaan orbiter, which arrived on September 24, 2014. The next missions to arrive will be the European Space Agency’s ExoMars mission, comprising an orbiter, lander, and a rover, followed by NASA’s InSight robotic lander mission, slated for launch in March 2016 and a planned arrival in September, 2016.</p>
+        <h2>Mars has the largest dust storms in the solar systm.</h2>
+        <p>They can last for months and cover the entire planet. The seasons are extreme because its elliptical (oval-shaped) orbital path around the Sun is more elongated than most other planets in the solar systm.</p>
+        <br>
+      </div>
+      <input class='read' id='readJupiter' name='jupiterRead' type='radio'>
+      <label class='closeBig' for='closeJupiter'></label>
+      <input class='read' id='closeJupiter' name='jupiterRead' type='radio'>
+      <div class='panel'>
+        <h1>Jupiter</h1>
+        <p>Jupiter is the largest planet in the solar systm. Fittingly, it was named after the king of the gods in Roman mythology. In a similar manner, the ancient Greeks named the planet after Zeus, the king of the Greek pantheon.</p>
+        <p>Jupiter helped revolutionize the way we saw the universe and ourselves in 1610, when Galileo discovered Jupiter's four large moons — Io, Europa, Ganymede and Callisto, now known as the Galilean moons. This was the first time that celestial bodies were seen circling an object other than Earth, major support of the Copernican view that Earth was not the center of the universe.</p>
+        <img src='http://hanaleikauaivacation.com/wp-content/uploads/parser/jupiter-landscape-1.jpg'>
+        <h2>Jupiter is the fourth brightest object in the solar systm.</h2>
+        <p>Only the Sun, Moon and Venus are brighter. It is one of five planets visible to the naked eye from Earth.</p>
+        <h2>The ancient Babylonians were the first to record their sightings of Jupiter.</h2>
+        <p>This was around the 7th or 8th century BC. Jupiter is named after the king of the Roman gods. To the Greeks, it represented Zeus, the god of thunder. The Mesopotamians saw Jupiter as the god Marduk and patron of the city of Babylon. Germanic tribes saw this planet as Donar, or Thor.</p>
+        <h2>Jupiter has the shortest day of all the planets.</h2>
+        <p>It turns on its axis once every 9 hours and 55 minutes. The rapid rotation flattens the planet slightly, giving it an oblate shape.</p>
+        <h2>Jupiter orbits the Sun once every 11.8 Earth years.</h2>
+        <p>From our point of view on Earth, it appears to move slowly in the sky, taking months to move from one constellation to another.</p>
+        <br>
+      </div>
+      <input class='read' id='readSaturn' name='saturnRead' type='radio'>
+      <label class='closeBig' for='closeSaturn'></label>
+      <input class='read' id='closeSaturn' name='saturnRead' type='radio'>
+      <div class='panel'>
+        <h1>Saturn</h1>
+        <p>Saturn is the sixth planet from the sun and the second largest planet in the solar systm. Saturn was the Roman name for Cronus, the lord of the Titans in Greek mythology. Saturn is the root of the English word "Saturday."</p>
+        <p>Saturn is the farthest planet from Earth visible to the naked human eye, but it is through a telescope that the planet's most outstanding features can be seen: Saturn's rings. Although the other gas giants in the solar systm — Jupiter, Uranus and Neptune — also have rings, those of Saturn are without a doubt the most extraordinary.</p>
+        <img src='http://ak0.picdn.net/shutterstock/videos/4049260/thumb/1.jpg'>
+        <h2>Saturn can be seen with the naked eye.</h2>
+        <p>It is the fifth brightest object in the solar systm and is also easily studied through binoculars or a small telescope.</p>
+        <h2>Saturn was known to the ancients, including the Babylonians and Far Eastern observers.</h2>
+        <p>It is named for the Roman god Saturnus, and was known to the Greeks as Cronus.</p>
+        <h2>Saturn is the flattest planet.</h2>
+        <p>Its polar diameter is 90% of its equatorial diameter, this is due to its low density and fast rotation. Saturn turns on its axis once every 10 hours and 34 minutes giving it the second-shortest day of any of the solar systm’s planets.</p>
+        <h2>Saturn orbits the Sun once every 29.4 Earth years.</h2>
+        <p>Its slow movement against the backdrop of stars earned it the nickname of “Lubadsagush” from the ancient Assyrians. The name means “oldest of the old”.</p>
+        <br>
+      </div>
+      <input class='read' id='readUranus' name='uranusRead' type='radio'>
+      <label class='closeBig' for='closeUranus'></label>
+      <input class='read' id='closeUranus' name='uranusRead' type='radio'>
+      <div class='panel'>
+        <h1>Uranus</h1>
+        <p>Uranus is the seventh planet from the sun and the first to be discovered by scientists. Although Uranus is visible to the naked eye, it was long mistaken as a star because of the planet's dimness and slow orbit. The planet is also notable for its dramatic tilt, which causes its axis to point nearly directly at the sun.</p>
+        <p>British astronomer William Herschel discovered Uranus accidentally on March 13, 1781, with his telescope while surveying all stars down to those about 10 times dimmer than can be seen by the naked eye. One "star" seemed different, and within a year Uranus was shown to follow a planetary orbit.</p>
+        <img src='http://www.cosmosup.com/wp-content/uploads/2016/02/Uranus-Facts-About-the-Planet-Uranus-700x325.jpg'>
+        <h2>Uranus was officially discovered by Sir William Herschel in 1781.</h2>
+        <p>It is too dim to have been seen by the ancients. At first Herschel thought it was a comet, but several years later it was confirmed as a planet. Herscal tried to have his discovery named “Georgian Sidus” after King George III. The name Uranus was suggested by astronomer Johann Bode. The name comes from the ancient Greek deity Ouranos.</p>
+        <h2>Uranus turns on its axis once every 17 hours, 14 minutes.</h2>
+        <p>The planet rotates in a retrograde direction, opposite to the way Earth and most other planets turn.</p>
+        <h2>Uranus makes one trip around the Sun every 84 Earth years.</h2>
+        <p>During some parts of its orbit one or the other of its poles point directly at the Sun and get about 42 years of direct sunlight. The rest of the time they are in darkness.</p>
+        <h2>Uranus is often referred to as an “ice giant” planet.</h2>
+        <p>Like the other gas giants, it has a hydrogen upper layer, which has helium mixed in. Below that is an icy “mantle, which surrounds a rock and ice core. The upper atmosphere is made of water, ammonia and the methane ice crystals that give the planet its pale blue colour.</p>
+        <br>
+      </div>
+      <input class='read' id='readNeptune' name='neptuneRead' type='radio'>
+      <label class='closeBig' for='closeNeptune'></label>
+      <input class='read' id='closeNeptune' name='neptuneRead' type='radio'>
+      <div class='panel'>
+        <h1>Neptune</h1>
+        <p>Neptune is the eighth planet from the sun. It was the first planet to get its existence predicted by mathematical calculations before it was actually seen through a telescope on Sept. 23, 1846. Irregularities in the orbit of Uranus led French astronomer Alexis Bouvard to suggest that the gravitational pull from another celestial body might be responsible. German astronomer Johann Galle then relied on subsequent calculations to help spot Neptune via telescope. Previously, astronomer Galileo Galilei sketched the planet, but he mistook it for a star due to its slow motion. In accordance with all the other planets seen in the sky, this new world was given a name from Greek and Roman mythology — Neptune, the Roman god of the sea.</p>
+        <p>Only one mission has flown by Neptune – Voyager 2 in 1989 – meaning that astronomers have done most studies using ground-based telescopes. Today, there are still many mysteries about the cool, blue planet, such as why its winds are so speedy and why its magnetic field is offset.</p>
+        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy8Dd14tbXAzh1iz-EJl9tulRwH7Bb-SxX6sXpKFDbqb-NKwpE'>
+        <h2>Neptune was not known to the ancients.</h2>
+        <p>It is not visible to the naked eye and was first observed in 1846. Its position was determined using mathematical predictions. It was named after the Roman god of the sea.</p>
+        <h2>Neptune spins on its axis very rapidly.</h2>
+        <p>Its equatorial clouds take 18 hours to make one rotation. This is because Neptune is not solid body.</p>
+        <h2>Neptune is the smallest of the ice giants.</h2>
+        <p>Despite being smaller than Uranus, Neptune has a greater mass. Below its heavy atmosphere, Uranus is made of layers of hydrogen, helium, and methane gases. They enclose a layer of water, ammonia and methane ice. The inner core of the planet is made of rock.</p>
+        <h2>The atmosphere of Neptune is made of hydrogen and helium, with some methane.</h2>
+        <p>The methane absorbs red light, which makes the planet appear a lovely blue. High, thin clouds drift in the upper atmosphere.</p>
+      </div>
+      <input class='read' id='readPluto' name='plutoRead' type='radio'>
+      <label class='closeBig' for='closePluto'></label>
+      <input class='read' id='closePluto' name='plutoRead' type='radio'>
+      <div class='panel'>
+        <h1>Pluto</h1>
+        <p>Pluto, once considered the ninth and most distant planet from the sun, is now the largest known dwarf planet in the solar systm. It is also one of the largest known members of the Kuiper Belt, a shadowy zone beyond the orbit of Neptune thought to be populated by hundreds of thousands of rocky, icy bodies each larger than 62 miles (100 kilometers) across, along with 1 trillion or more comets.</p>
+        <p>In 2006, Pluto was reclassified as a dwarf planet, a change widely thought of as a demotion. The question of Pluto's planet status has attracted controversy and stirred debate in the scientific community, and among the general public, since then. In 2017, a science group (including members of the New Horizon mission) proposed a new definition of planethood based on "round objects in space smaller than stars," which would make the number of planets in our solar systm expand from 8 to roughly 100.</p>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/asd.jpeg'>
+        <h2>Pluto is named after the Greek god of the underworld.</h2>
+        <p>This is a later name for the more well known Hades and was proposed by Venetia Burney an eleven year old schoolgirl from Oxford, England.</p>
+        <h2>Pluto was reclassified from a planet to a dwarf planet in 2006.</h2>
+        <p>This is when the IAU formalised the definition of a planet as “A planet is a celestial body that (a) is in orbit around the Sun, (b) has sufficient mass for its self-gravity to overcome rigid body forces so that it assumes a hydrostatic equilibrium (nearly round) shape, and (c) has cleared the neighbourhood around its orbit.”</p>
+        <h2>Pluto was discovered on February 18th, 1930 by the Lowell Observatory.</h2>
+        <p>For the 76 years between Pluto being discovered and the time it was reclassified as a dwarf planet it completed under a third of its orbit around the Sun.</p>
+        <h2>Pluto has five known moons.</h2>
+        <p>The moons are Charon (discovered in 1978,), Hydra and Nix (both discovered in 2005), Kerberos originally P4 (discovered 2011) and Styx originally P5 (discovered 2012) official designations S/2011 (134340) 1 and  S/2012 (134340) 1.</p>
+      </div>
+      -->
+      <div class="background">
+        <div id="sky"></div>
+      </div>
+      <style>
+
+        .background {
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background-color: red;
+          top: 0;
+          left: 0;
+          right: 0;
+          z-index: -10;
+        }
+
+
+#sky {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.star {
+  opacity: 0;
+  position: absolute;
+  background: white;
+  box-shadow: 0px 0px 20px 0px white;
+  border-radius: 100%;
+  transform-origin: 0, 0;
+  animation-timing-function: linear, linear !important;
+  animation-iteration-count: infinite, infinite !important;
+  animation-delay: -30s, -30s !important;
+}
+
+.size-1 {
+  width: 1px;
+  height: 1px;
+}
+
+.size-2 {
+  width: 2px;
+  height: 2px;
+}
+
+.axis-1 {
+  animation: anim0 6148ms, fade2 6148ms;
+}
+
+.axis-2 {
+  animation: anim0 10275ms, fade7 10275ms;
+}
+
+.axis-3 {
+  animation: anim0 43312ms, fade2 43312ms;
+}
+
+.axis-4 {
+  animation: anim4 11117ms, fade8 11117ms;
+}
+
+.axis-5 {
+  animation: anim4 42936ms, fade2 42936ms;
+}
+
+.axis-6 {
+  animation: anim4 28580ms, fade3 28580ms;
+}
+
+.axis-7 {
+  animation: anim4 9309ms, fade8 9309ms;
+}
+
+.axis-8 {
+  animation: anim8 18851ms, fade8 18851ms;
+}
+
+.axis-9 {
+  animation: anim8 38272ms, fade2 38272ms;
+}
+
+.axis-10 {
+  animation: anim8 17512ms, fade9 17512ms;
+}
+
+.axis-11 {
+  animation: anim8 34648ms, fade5 34648ms;
+}
+
+.axis-12 {
+  animation: anim12 25918ms, fade5 25918ms;
+}
+
+.axis-13 {
+  animation: anim12 36730ms, fade1 36730ms;
+}
+
+.axis-14 {
+  animation: anim12 41095ms, fade10 41095ms;
+}
+
+.axis-15 {
+  animation: anim12 41505ms, fade1 41505ms;
+}
+
+.axis-16 {
+  animation: anim16 34960ms, fade10 34960ms;
+}
+
+.axis-17 {
+  animation: anim16 37753ms, fade3 37753ms;
+}
+
+.axis-18 {
+  animation: anim16 20382ms, fade1 20382ms;
+}
+
+.axis-19 {
+  animation: anim16 35564ms, fade9 35564ms;
+}
+
+.axis-20 {
+  animation: anim20 26510ms, fade7 26510ms;
+}
+
+.axis-21 {
+  animation: anim20 23797ms, fade2 23797ms;
+}
+
+.axis-22 {
+  animation: anim20 30283ms, fade2 30283ms;
+}
+
+.axis-23 {
+  animation: anim20 29943ms, fade6 29943ms;
+}
+
+.axis-24 {
+  animation: anim24 21956ms, fade10 21956ms;
+}
+
+.axis-25 {
+  animation: anim24 31951ms, fade3 31951ms;
+}
+
+.axis-26 {
+  animation: anim24 37003ms, fade6 37003ms;
+}
+
+.axis-27 {
+  animation: anim24 32832ms, fade10 32832ms;
+}
+
+.axis-28 {
+  animation: anim28 44470ms, fade8 44470ms;
+}
+
+.axis-29 {
+  animation: anim28 27017ms, fade6 27017ms;
+}
+
+.axis-30 {
+  animation: anim28 36065ms, fade3 36065ms;
+}
+
+.axis-31 {
+  animation: anim28 20294ms, fade5 20294ms;
+}
+
+.axis-32 {
+  animation: anim32 15957ms, fade4 15957ms;
+}
+
+.axis-33 {
+  animation: anim32 43550ms, fade8 43550ms;
+}
+
+.axis-34 {
+  animation: anim32 7283ms, fade6 7283ms;
+}
+
+.axis-35 {
+  animation: anim32 10679ms, fade4 10679ms;
+}
+
+.axis-36 {
+  animation: anim36 15171ms, fade3 15171ms;
+}
+
+.axis-37 {
+  animation: anim36 29652ms, fade7 29652ms;
+}
+
+.axis-38 {
+  animation: anim36 30722ms, fade8 30722ms;
+}
+
+.axis-39 {
+  animation: anim36 18834ms, fade7 18834ms;
+}
+
+.axis-40 {
+  animation: anim40 43395ms, fade7 43395ms;
+}
+
+.axis-41 {
+  animation: anim40 7825ms, fade10 7825ms;
+}
+
+.axis-42 {
+  animation: anim40 32283ms, fade6 32283ms;
+}
+
+.axis-43 {
+  animation: anim40 41776ms, fade5 41776ms;
+}
+
+.axis-44 {
+  animation: anim44 5292ms, fade7 5292ms;
+}
+
+.axis-45 {
+  animation: anim44 13510ms, fade7 13510ms;
+}
+
+.axis-46 {
+  animation: anim44 43564ms, fade4 43564ms;
+}
+
+.axis-47 {
+  animation: anim44 28157ms, fade7 28157ms;
+}
+
+.axis-48 {
+  animation: anim48 9877ms, fade2 9877ms;
+}
+
+.axis-49 {
+  animation: anim48 27950ms, fade10 27950ms;
+}
+
+.axis-50 {
+  animation: anim48 11682ms, fade3 11682ms;
+}
+
+.axis-51 {
+  animation: anim48 21151ms, fade9 21151ms;
+}
+
+.axis-52 {
+  animation: anim52 33602ms, fade1 33602ms;
+}
+
+.axis-53 {
+  animation: anim52 20844ms, fade8 20844ms;
+}
+
+.axis-54 {
+  animation: anim52 12756ms, fade8 12756ms;
+}
+
+.axis-55 {
+  animation: anim52 41835ms, fade3 41835ms;
+}
+
+.axis-56 {
+  animation: anim56 9143ms, fade10 9143ms;
+}
+
+.axis-57 {
+  animation: anim56 30558ms, fade4 30558ms;
+}
+
+.axis-58 {
+  animation: anim56 41359ms, fade4 41359ms;
+}
+
+.axis-59 {
+  animation: anim56 44833ms, fade1 44833ms;
+}
+
+.axis-60 {
+  animation: anim60 33790ms, fade4 33790ms;
+}
+
+.axis-61 {
+  animation: anim60 26009ms, fade7 26009ms;
+}
+
+.axis-62 {
+  animation: anim60 10057ms, fade1 10057ms;
+}
+
+.axis-63 {
+  animation: anim60 7849ms, fade5 7849ms;
+}
+
+.axis-64 {
+  animation: anim64 8202ms, fade3 8202ms;
+}
+
+.axis-65 {
+  animation: anim64 17604ms, fade5 17604ms;
+}
+
+.axis-66 {
+  animation: anim64 21475ms, fade6 21475ms;
+}
+
+.axis-67 {
+  animation: anim64 12189ms, fade4 12189ms;
+}
+
+.axis-68 {
+  animation: anim68 7373ms, fade6 7373ms;
+}
+
+.axis-69 {
+  animation: anim68 7760ms, fade2 7760ms;
+}
+
+.axis-70 {
+  animation: anim68 41633ms, fade6 41633ms;
+}
+
+.axis-71 {
+  animation: anim68 15488ms, fade4 15488ms;
+}
+
+.axis-72 {
+  animation: anim72 38753ms, fade10 38753ms;
+}
+
+.axis-73 {
+  animation: anim72 28471ms, fade3 28471ms;
+}
+
+.axis-74 {
+  animation: anim72 24482ms, fade7 24482ms;
+}
+
+.axis-75 {
+  animation: anim72 40989ms, fade1 40989ms;
+}
+
+.axis-76 {
+  animation: anim76 33757ms, fade4 33757ms;
+}
+
+.axis-77 {
+  animation: anim76 27071ms, fade6 27071ms;
+}
+
+.axis-78 {
+  animation: anim76 8740ms, fade2 8740ms;
+}
+
+.axis-79 {
+  animation: anim76 31623ms, fade10 31623ms;
+}
+
+.axis-80 {
+  animation: anim80 7832ms, fade8 7832ms;
+}
+
+.axis-81 {
+  animation: anim80 29115ms, fade9 29115ms;
+}
+
+.axis-82 {
+  animation: anim80 37562ms, fade8 37562ms;
+}
+
+.axis-83 {
+  animation: anim80 26243ms, fade5 26243ms;
+}
+
+.axis-84 {
+  animation: anim84 23438ms, fade6 23438ms;
+}
+
+.axis-85 {
+  animation: anim84 5470ms, fade7 5470ms;
+}
+
+.axis-86 {
+  animation: anim84 27740ms, fade8 27740ms;
+}
+
+.axis-87 {
+  animation: anim84 28994ms, fade2 28994ms;
+}
+
+.axis-88 {
+  animation: anim88 24738ms, fade1 24738ms;
+}
+
+.axis-89 {
+  animation: anim88 33467ms, fade5 33467ms;
+}
+
+.axis-90 {
+  animation: anim88 13111ms, fade8 13111ms;
+}
+
+.axis-91 {
+  animation: anim88 37769ms, fade4 37769ms;
+}
+
+.axis-92 {
+  animation: anim92 16650ms, fade10 16650ms;
+}
+
+.axis-93 {
+  animation: anim92 16051ms, fade10 16051ms;
+}
+
+.axis-94 {
+  animation: anim92 30142ms, fade10 30142ms;
+}
+
+.axis-95 {
+  animation: anim92 32553ms, fade7 32553ms;
+}
+
+.axis-96 {
+  animation: anim96 22939ms, fade2 22939ms;
+}
+
+.axis-97 {
+  animation: anim96 29446ms, fade2 29446ms;
+}
+
+.axis-98 {
+  animation: anim96 29588ms, fade7 29588ms;
+}
+
+.axis-99 {
+  animation: anim96 35160ms, fade10 35160ms;
+}
+
+.axis-100 {
+  animation: anim100 6472ms, fade8 6472ms;
+}
+
+.axis-101 {
+  animation: anim100 27863ms, fade5 27863ms;
+}
+
+.axis-102 {
+  animation: anim100 28800ms, fade4 28800ms;
+}
+
+.axis-103 {
+  animation: anim100 37798ms, fade4 37798ms;
+}
+
+.axis-104 {
+  animation: anim104 35651ms, fade4 35651ms;
+}
+
+.axis-105 {
+  animation: anim104 16726ms, fade9 16726ms;
+}
+
+.axis-106 {
+  animation: anim104 12607ms, fade1 12607ms;
+}
+
+.axis-107 {
+  animation: anim104 5300ms, fade3 5300ms;
+}
+
+.axis-108 {
+  animation: anim108 30644ms, fade5 30644ms;
+}
+
+.axis-109 {
+  animation: anim108 14018ms, fade4 14018ms;
+}
+
+.axis-110 {
+  animation: anim108 27538ms, fade7 27538ms;
+}
+
+.axis-111 {
+  animation: anim108 31001ms, fade1 31001ms;
+}
+
+.axis-112 {
+  animation: anim112 37773ms, fade3 37773ms;
+}
+
+.axis-113 {
+  animation: anim112 6083ms, fade5 6083ms;
+}
+
+.axis-114 {
+  animation: anim112 39090ms, fade5 39090ms;
+}
+
+.axis-115 {
+  animation: anim112 8611ms, fade4 8611ms;
+}
+
+.axis-116 {
+  animation: anim116 41514ms, fade2 41514ms;
+}
+
+.axis-117 {
+  animation: anim116 14849ms, fade10 14849ms;
+}
+
+.axis-118 {
+  animation: anim116 39675ms, fade6 39675ms;
+}
+
+.axis-119 {
+  animation: anim116 11007ms, fade2 11007ms;
+}
+
+.axis-120 {
+  animation: anim120 34349ms, fade10 34349ms;
+}
+
+.axis-121 {
+  animation: anim120 5740ms, fade5 5740ms;
+}
+
+.axis-122 {
+  animation: anim120 6918ms, fade9 6918ms;
+}
+
+.axis-123 {
+  animation: anim120 37849ms, fade6 37849ms;
+}
+
+.axis-124 {
+  animation: anim124 32785ms, fade9 32785ms;
+}
+
+.axis-125 {
+  animation: anim124 8467ms, fade4 8467ms;
+}
+
+.axis-126 {
+  animation: anim124 26034ms, fade3 26034ms;
+}
+
+.axis-127 {
+  animation: anim124 33476ms, fade5 33476ms;
+}
+
+.axis-128 {
+  animation: anim128 18864ms, fade6 18864ms;
+}
+
+.axis-129 {
+  animation: anim128 13066ms, fade1 13066ms;
+}
+
+.axis-130 {
+  animation: anim128 15787ms, fade2 15787ms;
+}
+
+.axis-131 {
+  animation: anim128 9868ms, fade8 9868ms;
+}
+
+.axis-132 {
+  animation: anim132 14202ms, fade2 14202ms;
+}
+
+.axis-133 {
+  animation: anim132 20728ms, fade1 20728ms;
+}
+
+.axis-134 {
+  animation: anim132 20122ms, fade4 20122ms;
+}
+
+.axis-135 {
+  animation: anim132 8100ms, fade4 8100ms;
+}
+
+.axis-136 {
+  animation: anim136 39894ms, fade2 39894ms;
+}
+
+.axis-137 {
+  animation: anim136 26930ms, fade2 26930ms;
+}
+
+.axis-138 {
+  animation: anim136 5864ms, fade9 5864ms;
+}
+
+.axis-139 {
+  animation: anim136 34342ms, fade6 34342ms;
+}
+
+.axis-140 {
+  animation: anim140 29167ms, fade8 29167ms;
+}
+
+.axis-141 {
+  animation: anim140 30118ms, fade2 30118ms;
+}
+
+.axis-142 {
+  animation: anim140 35001ms, fade9 35001ms;
+}
+
+.axis-143 {
+  animation: anim140 27524ms, fade3 27524ms;
+}
+
+.axis-144 {
+  animation: anim144 7079ms, fade7 7079ms;
+}
+
+.axis-145 {
+  animation: anim144 23836ms, fade3 23836ms;
+}
+
+.axis-146 {
+  animation: anim144 12744ms, fade6 12744ms;
+}
+
+.axis-147 {
+  animation: anim144 29470ms, fade1 29470ms;
+}
+
+.axis-148 {
+  animation: anim148 31859ms, fade5 31859ms;
+}
+
+.axis-149 {
+  animation: anim148 11614ms, fade4 11614ms;
+}
+
+.axis-150 {
+  animation: anim148 17319ms, fade1 17319ms;
+}
+
+.axis-151 {
+  animation: anim148 23380ms, fade9 23380ms;
+}
+
+.axis-152 {
+  animation: anim152 13077ms, fade6 13077ms;
+}
+
+.axis-153 {
+  animation: anim152 34202ms, fade3 34202ms;
+}
+
+.axis-154 {
+  animation: anim152 24821ms, fade1 24821ms;
+}
+
+.axis-155 {
+  animation: anim152 27043ms, fade9 27043ms;
+}
+
+.axis-156 {
+  animation: anim156 36646ms, fade4 36646ms;
+}
+
+.axis-157 {
+  animation: anim156 18057ms, fade6 18057ms;
+}
+
+.axis-158 {
+  animation: anim156 23881ms, fade8 23881ms;
+}
+
+.axis-159 {
+  animation: anim156 15533ms, fade7 15533ms;
+}
+
+.axis-160 {
+  animation: anim160 38228ms, fade9 38228ms;
+}
+
+.axis-161 {
+  animation: anim160 12600ms, fade9 12600ms;
+}
+
+.axis-162 {
+  animation: anim160 20682ms, fade8 20682ms;
+}
+
+.axis-163 {
+  animation: anim160 6228ms, fade8 6228ms;
+}
+
+.axis-164 {
+  animation: anim164 25025ms, fade4 25025ms;
+}
+
+.axis-165 {
+  animation: anim164 13306ms, fade10 13306ms;
+}
+
+.axis-166 {
+  animation: anim164 38263ms, fade1 38263ms;
+}
+
+.axis-167 {
+  animation: anim164 43104ms, fade10 43104ms;
+}
+
+.axis-168 {
+  animation: anim168 23941ms, fade5 23941ms;
+}
+
+.axis-169 {
+  animation: anim168 5710ms, fade3 5710ms;
+}
+
+.axis-170 {
+  animation: anim168 6455ms, fade5 6455ms;
+}
+
+.axis-171 {
+  animation: anim168 7704ms, fade10 7704ms;
+}
+
+.axis-172 {
+  animation: anim172 10947ms, fade9 10947ms;
+}
+
+.axis-173 {
+  animation: anim172 10597ms, fade4 10597ms;
+}
+
+.axis-174 {
+  animation: anim172 15176ms, fade1 15176ms;
+}
+
+.axis-175 {
+  animation: anim172 40791ms, fade8 40791ms;
+}
+
+.axis-176 {
+  animation: anim176 40698ms, fade7 40698ms;
+}
+
+.axis-177 {
+  animation: anim176 40705ms, fade5 40705ms;
+}
+
+.axis-178 {
+  animation: anim176 19764ms, fade4 19764ms;
+}
+
+.axis-179 {
+  animation: anim176 40195ms, fade3 40195ms;
+}
+
+.axis-180 {
+  animation: anim180 20443ms, fade6 20443ms;
+}
+
+.axis-181 {
+  animation: anim180 39935ms, fade8 39935ms;
+}
+
+.axis-182 {
+  animation: anim180 26454ms, fade4 26454ms;
+}
+
+.axis-183 {
+  animation: anim180 7884ms, fade6 7884ms;
+}
+
+.axis-184 {
+  animation: anim184 12321ms, fade1 12321ms;
+}
+
+.axis-185 {
+  animation: anim184 28646ms, fade3 28646ms;
+}
+
+.axis-186 {
+  animation: anim184 41573ms, fade7 41573ms;
+}
+
+.axis-187 {
+  animation: anim184 18164ms, fade6 18164ms;
+}
+
+.axis-188 {
+  animation: anim188 21407ms, fade1 21407ms;
+}
+
+.axis-189 {
+  animation: anim188 18568ms, fade3 18568ms;
+}
+
+.axis-190 {
+  animation: anim188 34347ms, fade10 34347ms;
+}
+
+.axis-191 {
+  animation: anim188 41720ms, fade5 41720ms;
+}
+
+.axis-192 {
+  animation: anim192 11860ms, fade8 11860ms;
+}
+
+.axis-193 {
+  animation: anim192 19885ms, fade8 19885ms;
+}
+
+.axis-194 {
+  animation: anim192 30763ms, fade7 30763ms;
+}
+
+.axis-195 {
+  animation: anim192 42788ms, fade8 42788ms;
+}
+
+.axis-196 {
+  animation: anim196 29508ms, fade8 29508ms;
+}
+
+.axis-197 {
+  animation: anim196 32359ms, fade3 32359ms;
+}
+
+.axis-198 {
+  animation: anim196 34337ms, fade4 34337ms;
+}
+
+.axis-199 {
+  animation: anim196 29158ms, fade3 29158ms;
+}
+
+.axis-200 {
+  animation: anim200 19833ms, fade2 19833ms;
+}
+
+.axis-201 {
+  animation: anim200 10280ms, fade10 10280ms;
+}
+
+.axis-202 {
+  animation: anim200 42323ms, fade3 42323ms;
+}
+
+.axis-203 {
+  animation: anim200 32846ms, fade7 32846ms;
+}
+
+.axis-204 {
+  animation: anim204 44931ms, fade3 44931ms;
+}
+
+.axis-205 {
+  animation: anim204 23958ms, fade1 23958ms;
+}
+
+.axis-206 {
+  animation: anim204 10619ms, fade4 10619ms;
+}
+
+.axis-207 {
+  animation: anim204 28730ms, fade8 28730ms;
+}
+
+.axis-208 {
+  animation: anim208 11134ms, fade6 11134ms;
+}
+
+.axis-209 {
+  animation: anim208 27451ms, fade1 27451ms;
+}
+
+.axis-210 {
+  animation: anim208 44864ms, fade1 44864ms;
+}
+
+.axis-211 {
+  animation: anim208 23119ms, fade9 23119ms;
+}
+
+.axis-212 {
+  animation: anim212 35594ms, fade5 35594ms;
+}
+
+.axis-213 {
+  animation: anim212 29170ms, fade5 29170ms;
+}
+
+.axis-214 {
+  animation: anim212 7670ms, fade7 7670ms;
+}
+
+.axis-215 {
+  animation: anim212 32996ms, fade2 32996ms;
+}
+
+.axis-216 {
+  animation: anim216 19103ms, fade1 19103ms;
+}
+
+.axis-217 {
+  animation: anim216 24820ms, fade8 24820ms;
+}
+
+.axis-218 {
+  animation: anim216 44847ms, fade5 44847ms;
+}
+
+.axis-219 {
+  animation: anim216 10877ms, fade7 10877ms;
+}
+
+.axis-220 {
+  animation: anim220 35758ms, fade7 35758ms;
+}
+
+.axis-221 {
+  animation: anim220 24873ms, fade4 24873ms;
+}
+
+.axis-222 {
+  animation: anim220 16269ms, fade4 16269ms;
+}
+
+.axis-223 {
+  animation: anim220 10696ms, fade10 10696ms;
+}
+
+.axis-224 {
+  animation: anim224 9539ms, fade1 9539ms;
+}
+
+.axis-225 {
+  animation: anim224 39728ms, fade6 39728ms;
+}
+
+.axis-226 {
+  animation: anim224 16238ms, fade3 16238ms;
+}
+
+.axis-227 {
+  animation: anim224 37592ms, fade9 37592ms;
+}
+
+.axis-228 {
+  animation: anim228 7467ms, fade6 7467ms;
+}
+
+.axis-229 {
+  animation: anim228 29498ms, fade7 29498ms;
+}
+
+.axis-230 {
+  animation: anim228 44514ms, fade7 44514ms;
+}
+
+.axis-231 {
+  animation: anim228 19393ms, fade10 19393ms;
+}
+
+.axis-232 {
+  animation: anim232 35073ms, fade9 35073ms;
+}
+
+.axis-233 {
+  animation: anim232 25443ms, fade9 25443ms;
+}
+
+.axis-234 {
+  animation: anim232 40656ms, fade4 40656ms;
+}
+
+.axis-235 {
+  animation: anim232 29385ms, fade6 29385ms;
+}
+
+.axis-236 {
+  animation: anim236 15007ms, fade4 15007ms;
+}
+
+.axis-237 {
+  animation: anim236 25323ms, fade7 25323ms;
+}
+
+.axis-238 {
+  animation: anim236 36934ms, fade9 36934ms;
+}
+
+.axis-239 {
+  animation: anim236 23606ms, fade4 23606ms;
+}
+
+.axis-240 {
+  animation: anim240 16978ms, fade10 16978ms;
+}
+
+.axis-241 {
+  animation: anim240 18174ms, fade7 18174ms;
+}
+
+.axis-242 {
+  animation: anim240 28270ms, fade4 28270ms;
+}
+
+.axis-243 {
+  animation: anim240 42119ms, fade5 42119ms;
+}
+
+.axis-244 {
+  animation: anim244 12382ms, fade9 12382ms;
+}
+
+.axis-245 {
+  animation: anim244 23869ms, fade4 23869ms;
+}
+
+.axis-246 {
+  animation: anim244 34989ms, fade2 34989ms;
+}
+
+.axis-247 {
+  animation: anim244 13054ms, fade1 13054ms;
+}
+
+.axis-248 {
+  animation: anim248 27263ms, fade3 27263ms;
+}
+
+.axis-249 {
+  animation: anim248 27254ms, fade6 27254ms;
+}
+
+.axis-250 {
+  animation: anim248 44185ms, fade5 44185ms;
+}
+
+.axis-251 {
+  animation: anim248 11327ms, fade9 11327ms;
+}
+
+.axis-252 {
+  animation: anim252 15393ms, fade8 15393ms;
+}
+
+.axis-253 {
+  animation: anim252 6971ms, fade3 6971ms;
+}
+
+.axis-254 {
+  animation: anim252 7984ms, fade9 7984ms;
+}
+
+.axis-255 {
+  animation: anim252 36861ms, fade4 36861ms;
+}
+
+.axis-256 {
+  animation: anim256 23850ms, fade2 23850ms;
+}
+
+.axis-257 {
+  animation: anim256 8329ms, fade3 8329ms;
+}
+
+.axis-258 {
+  animation: anim256 27607ms, fade7 27607ms;
+}
+
+.axis-259 {
+  animation: anim256 34784ms, fade1 34784ms;
+}
+
+.axis-260 {
+  animation: anim260 37507ms, fade10 37507ms;
+}
+
+.axis-261 {
+  animation: anim260 31489ms, fade4 31489ms;
+}
+
+.axis-262 {
+  animation: anim260 30779ms, fade1 30779ms;
+}
+
+.axis-263 {
+  animation: anim260 44499ms, fade7 44499ms;
+}
+
+.axis-264 {
+  animation: anim264 13710ms, fade6 13710ms;
+}
+
+.axis-265 {
+  animation: anim264 44293ms, fade10 44293ms;
+}
+
+.axis-266 {
+  animation: anim264 8437ms, fade8 8437ms;
+}
+
+.axis-267 {
+  animation: anim264 13542ms, fade6 13542ms;
+}
+
+.axis-268 {
+  animation: anim268 38835ms, fade3 38835ms;
+}
+
+.axis-269 {
+  animation: anim268 15874ms, fade7 15874ms;
+}
+
+.axis-270 {
+  animation: anim268 25722ms, fade6 25722ms;
+}
+
+.axis-271 {
+  animation: anim268 36851ms, fade4 36851ms;
+}
+
+.axis-272 {
+  animation: anim272 20265ms, fade3 20265ms;
+}
+
+.axis-273 {
+  animation: anim272 13080ms, fade7 13080ms;
+}
+
+.axis-274 {
+  animation: anim272 35644ms, fade1 35644ms;
+}
+
+.axis-275 {
+  animation: anim272 15161ms, fade10 15161ms;
+}
+
+.axis-276 {
+  animation: anim276 37908ms, fade10 37908ms;
+}
+
+.axis-277 {
+  animation: anim276 9099ms, fade10 9099ms;
+}
+
+.axis-278 {
+  animation: anim276 41944ms, fade4 41944ms;
+}
+
+.axis-279 {
+  animation: anim276 36242ms, fade1 36242ms;
+}
+
+.axis-280 {
+  animation: anim280 33932ms, fade1 33932ms;
+}
+
+.axis-281 {
+  animation: anim280 16913ms, fade9 16913ms;
+}
+
+.axis-282 {
+  animation: anim280 13396ms, fade4 13396ms;
+}
+
+.axis-283 {
+  animation: anim280 23232ms, fade9 23232ms;
+}
+
+.axis-284 {
+  animation: anim284 34208ms, fade7 34208ms;
+}
+
+.axis-285 {
+  animation: anim284 43331ms, fade4 43331ms;
+}
+
+.axis-286 {
+  animation: anim284 10161ms, fade2 10161ms;
+}
+
+.axis-287 {
+  animation: anim284 26647ms, fade3 26647ms;
+}
+
+.axis-288 {
+  animation: anim288 13541ms, fade8 13541ms;
+}
+
+.axis-289 {
+  animation: anim288 6275ms, fade7 6275ms;
+}
+
+.axis-290 {
+  animation: anim288 38589ms, fade2 38589ms;
+}
+
+.axis-291 {
+  animation: anim288 39998ms, fade3 39998ms;
+}
+
+.axis-292 {
+  animation: anim292 19255ms, fade1 19255ms;
+}
+
+.axis-293 {
+  animation: anim292 42828ms, fade2 42828ms;
+}
+
+.axis-294 {
+  animation: anim292 26945ms, fade6 26945ms;
+}
+
+.axis-295 {
+  animation: anim292 31490ms, fade1 31490ms;
+}
+
+.axis-296 {
+  animation: anim296 16897ms, fade4 16897ms;
+}
+
+.axis-297 {
+  animation: anim296 14768ms, fade7 14768ms;
+}
+
+.axis-298 {
+  animation: anim296 13032ms, fade8 13032ms;
+}
+
+.axis-299 {
+  animation: anim296 42248ms, fade8 42248ms;
+}
+
+.axis-300 {
+  animation: anim300 35586ms, fade4 35586ms;
+}
+
+.axis-301 {
+  animation: anim300 18597ms, fade6 18597ms;
+}
+
+.axis-302 {
+  animation: anim300 37529ms, fade9 37529ms;
+}
+
+.axis-303 {
+  animation: anim300 35641ms, fade4 35641ms;
+}
+
+.axis-304 {
+  animation: anim304 13158ms, fade6 13158ms;
+}
+
+.axis-305 {
+  animation: anim304 20321ms, fade9 20321ms;
+}
+
+.axis-306 {
+  animation: anim304 30098ms, fade1 30098ms;
+}
+
+.axis-307 {
+  animation: anim304 30017ms, fade10 30017ms;
+}
+
+.axis-308 {
+  animation: anim308 7556ms, fade2 7556ms;
+}
+
+.axis-309 {
+  animation: anim308 25118ms, fade6 25118ms;
+}
+
+.axis-310 {
+  animation: anim308 40727ms, fade5 40727ms;
+}
+
+.axis-311 {
+  animation: anim308 25350ms, fade6 25350ms;
+}
+
+.axis-312 {
+  animation: anim312 32257ms, fade7 32257ms;
+}
+
+.axis-313 {
+  animation: anim312 11640ms, fade2 11640ms;
+}
+
+.axis-314 {
+  animation: anim312 8982ms, fade1 8982ms;
+}
+
+.axis-315 {
+  animation: anim312 16491ms, fade8 16491ms;
+}
+
+.axis-316 {
+  animation: anim316 29834ms, fade9 29834ms;
+}
+
+.axis-317 {
+  animation: anim316 34298ms, fade6 34298ms;
+}
+
+.axis-318 {
+  animation: anim316 37419ms, fade8 37419ms;
+}
+
+.axis-319 {
+  animation: anim316 20591ms, fade4 20591ms;
+}
+
+.axis-320 {
+  animation: anim320 19986ms, fade6 19986ms;
+}
+
+.axis-321 {
+  animation: anim320 10061ms, fade2 10061ms;
+}
+
+.axis-322 {
+  animation: anim320 12060ms, fade10 12060ms;
+}
+
+.axis-323 {
+  animation: anim320 43034ms, fade3 43034ms;
+}
+
+.axis-324 {
+  animation: anim324 14196ms, fade5 14196ms;
+}
+
+.axis-325 {
+  animation: anim324 21534ms, fade9 21534ms;
+}
+
+.axis-326 {
+  animation: anim324 23707ms, fade7 23707ms;
+}
+
+.axis-327 {
+  animation: anim324 15916ms, fade6 15916ms;
+}
+
+.axis-328 {
+  animation: anim328 21850ms, fade7 21850ms;
+}
+
+.axis-329 {
+  animation: anim328 13438ms, fade3 13438ms;
+}
+
+.axis-330 {
+  animation: anim328 17117ms, fade5 17117ms;
+}
+
+.axis-331 {
+  animation: anim328 31869ms, fade10 31869ms;
+}
+
+.axis-332 {
+  animation: anim332 43123ms, fade8 43123ms;
+}
+
+.axis-333 {
+  animation: anim332 27424ms, fade9 27424ms;
+}
+
+.axis-334 {
+  animation: anim332 11331ms, fade2 11331ms;
+}
+
+.axis-335 {
+  animation: anim332 32432ms, fade3 32432ms;
+}
+
+.axis-336 {
+  animation: anim336 38275ms, fade6 38275ms;
+}
+
+.axis-337 {
+  animation: anim336 41813ms, fade9 41813ms;
+}
+
+.axis-338 {
+  animation: anim336 15907ms, fade1 15907ms;
+}
+
+.axis-339 {
+  animation: anim336 10631ms, fade10 10631ms;
+}
+
+.axis-340 {
+  animation: anim340 36406ms, fade6 36406ms;
+}
+
+.axis-341 {
+  animation: anim340 33221ms, fade2 33221ms;
+}
+
+.axis-342 {
+  animation: anim340 30160ms, fade1 30160ms;
+}
+
+.axis-343 {
+  animation: anim340 8747ms, fade2 8747ms;
+}
+
+.axis-344 {
+  animation: anim344 25849ms, fade1 25849ms;
+}
+
+.axis-345 {
+  animation: anim344 6806ms, fade10 6806ms;
+}
+
+.axis-346 {
+  animation: anim344 36600ms, fade10 36600ms;
+}
+
+.axis-347 {
+  animation: anim344 11244ms, fade5 11244ms;
+}
+
+.axis-348 {
+  animation: anim348 5507ms, fade8 5507ms;
+}
+
+.axis-349 {
+  animation: anim348 13721ms, fade7 13721ms;
+}
+
+.axis-350 {
+  animation: anim348 16046ms, fade8 16046ms;
+}
+
+.axis-351 {
+  animation: anim348 37558ms, fade2 37558ms;
+}
+
+.axis-352 {
+  animation: anim352 25486ms, fade9 25486ms;
+}
+
+.axis-353 {
+  animation: anim352 7365ms, fade7 7365ms;
+}
+
+.axis-354 {
+  animation: anim352 18375ms, fade4 18375ms;
+}
+
+.axis-355 {
+  animation: anim352 20908ms, fade1 20908ms;
+}
+
+.axis-356 {
+  animation: anim356 27184ms, fade3 27184ms;
+}
+
+.axis-357 {
+  animation: anim356 34454ms, fade10 34454ms;
+}
+
+.axis-358 {
+  animation: anim356 33534ms, fade9 33534ms;
+}
+
+.axis-359 {
+  animation: anim356 7508ms, fade9 7508ms;
+}
+
+.axis-360 {
+  animation: anim360 39213ms, fade3 39213ms;
+}
+
+@keyframes fade1 {
+  3% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade2 {
+  18% {
+    opacity: 0;
+  }
+  28% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade3 {
+  19% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade4 {
+  19% {
+    opacity: 0;
+  }
+  29% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade5 {
+  7% {
+    opacity: 0;
+  }
+  17% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade6 {
+  6% {
+    opacity: 0;
+  }
+  16% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade7 {
+  3% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade8 {
+  3% {
+    opacity: 0;
+  }
+  13% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade9 {
+  4% {
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade10 {
+  1% {
+    opacity: 0;
+  }
+  11% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes anim4 {
+  100% {
+    transform: translate(79.8051240208vw, 5.5805178995vh);
+  }
+}
+@keyframes anim8 {
+  100% {
+    transform: translate(79.2214454993vw, 11.1338480768vh);
+  }
+}
+@keyframes anim12 {
+  100% {
+    transform: translate(78.2518080587vw, 16.6329352654vh);
+  }
+}
+@keyframes anim16 {
+  100% {
+    transform: translate(76.9009356751vw, 22.0509884654vh);
+  }
+}
+@keyframes anim20 {
+  100% {
+    transform: translate(75.1754096629vw, 27.3616114661vh);
+  }
+}
+@keyframes anim24 {
+  100% {
+    transform: translate(73.0836366114vw, 32.5389314461vh);
+  }
+}
+@keyframes anim28 {
+  100% {
+    transform: translate(70.6358074287vw, 37.5577250229vh);
+  }
+}
+@keyframes anim32 {
+  100% {
+    transform: translate(67.8438476925vw, 42.3935411387vh);
+  }
+}
+@keyframes anim36 {
+  100% {
+    transform: translate(64.72135955vw, 47.0228201834vh);
+  }
+}
+@keyframes anim40 {
+  100% {
+    transform: translate(61.2835554495vw, 51.4230087749vh);
+  }
+}
+@keyframes anim44 {
+  100% {
+    transform: translate(57.5471840271vw, 55.5726696367vh);
+  }
+}
+@keyframes anim48 {
+  100% {
+    transform: translate(53.5304485087vw, 59.4515860382vh);
+  }
+}
+@keyframes anim52 {
+  100% {
+    transform: translate(49.252918026vw, 63.0408602885vh);
+  }
+}
+@keyframes anim56 {
+  100% {
+    transform: translate(44.7354322777vw, 66.3230058044vh);
+  }
+}
+@keyframes anim60 {
+  100% {
+    transform: translate(40vw, 69.2820323028vh);
+  }
+}
+@keyframes anim64 {
+  100% {
+    transform: translate(35.0696917431vw, 71.9035237039vh);
+  }
+}
+@keyframes anim68 {
+  100% {
+    transform: translate(29.9685274733vw, 74.1747083653vh);
+  }
+}
+@keyframes anim72 {
+  100% {
+    transform: translate(24.72135955vw, 76.0845213036vh);
+  }
+}
+@keyframes anim76 {
+  100% {
+    transform: translate(19.353751648vw, 77.6236581021vh);
+  }
+}
+@keyframes anim80 {
+  100% {
+    transform: translate(13.8918542133vw, 78.784620241vh);
+  }
+}
+@keyframes anim84 {
+  100% {
+    transform: translate(8.3622770614vw, 79.5617516295vh);
+  }
+}
+@keyframes anim88 {
+  100% {
+    transform: translate(2.7919597362vw, 79.9512661615vh);
+  }
+}
+@keyframes anim92 {
+  100% {
+    transform: translate(-2.7919597362vw, 79.9512661615vh);
+  }
+}
+@keyframes anim96 {
+  100% {
+    transform: translate(-8.3622770614vw, 79.5617516295vh);
+  }
+}
+@keyframes anim100 {
+  100% {
+    transform: translate(-13.8918542134vw, 78.784620241vh);
+  }
+}
+@keyframes anim104 {
+  100% {
+    transform: translate(-19.353751648vw, 77.6236581021vh);
+  }
+}
+@keyframes anim108 {
+  100% {
+    transform: translate(-24.72135955vw, 76.0845213036vh);
+  }
+}
+@keyframes anim112 {
+  100% {
+    transform: translate(-29.9685274733vw, 74.1747083653vh);
+  }
+}
+@keyframes anim116 {
+  100% {
+    transform: translate(-35.0696917431vw, 71.9035237039vh);
+  }
+}
+@keyframes anim120 {
+  100% {
+    transform: translate(-40vw, 69.2820323027vh);
+  }
+}
+@keyframes anim124 {
+  100% {
+    transform: translate(-44.7354322777vw, 66.3230058044vh);
+  }
+}
+@keyframes anim128 {
+  100% {
+    transform: translate(-49.2529180261vw, 63.0408602885vh);
+  }
+}
+@keyframes anim132 {
+  100% {
+    transform: translate(-53.5304485087vw, 59.4515860382vh);
+  }
+}
+@keyframes anim136 {
+  100% {
+    transform: translate(-57.5471840271vw, 55.5726696367vh);
+  }
+}
+@keyframes anim140 {
+  100% {
+    transform: translate(-61.2835554495vw, 51.4230087749vh);
+  }
+}
+@keyframes anim144 {
+  100% {
+    transform: translate(-64.72135955vw, 47.0228201834vh);
+  }
+}
+@keyframes anim148 {
+  100% {
+    transform: translate(-67.8438476924vw, 42.3935411387vh);
+  }
+}
+@keyframes anim152 {
+  100% {
+    transform: translate(-70.6358074286vw, 37.5577250229vh);
+  }
+}
+@keyframes anim156 {
+  100% {
+    transform: translate(-73.0836366112vw, 32.5389314461vh);
+  }
+}
+@keyframes anim160 {
+  100% {
+    transform: translate(-75.1754096624vw, 27.3616114661vh);
+  }
+}
+@keyframes anim164 {
+  100% {
+    transform: translate(-76.9009356743vw, 22.0509884654vh);
+  }
+}
+@keyframes anim168 {
+  100% {
+    transform: translate(-78.2518080574vw, 16.6329352656vh);
+  }
+}
+@keyframes anim172 {
+  100% {
+    transform: translate(-79.2214454971vw, 11.1338480771vh);
+  }
+}
+@keyframes anim176 {
+  100% {
+    transform: translate(-79.8051240171vw, 5.5805179vh);
+  }
+}
+@keyframes anim180 {
+  100% {
+    transform: translate(-79.9999999939vw, 8.1127308627vh);
+  }
+}
+@keyframes anim184 {
+  100% {
+    transform: translate(-79.805124011vw, -5.5805178982vh);
+  }
+}
+@keyframes anim188 {
+  100% {
+    transform: translate(-79.2214454836vw, -11.1338480746vh);
+  }
+}
+@keyframes anim192 {
+  100% {
+    transform: translate(-78.2518080337vw, -16.6329352618vh);
+  }
+}
+@keyframes anim196 {
+  100% {
+    transform: translate(-76.9009356358vw, -22.0509884595vh);
+  }
+}
+@keyframes anim200 {
+  100% {
+    transform: translate(-75.1754096017vw, -27.3616114568vh);
+  }
+}
+@keyframes anim204 {
+  100% {
+    transform: translate(-73.0836365169vw, -32.5389314314vh);
+  }
+}
+@keyframes anim208 {
+  100% {
+    transform: translate(-70.6358072839vw, -37.557725vh);
+  }
+}
+@keyframes anim212 {
+  100% {
+    transform: translate(-67.8438474725vw, -42.3935411032vh);
+  }
+}
+@keyframes anim216 {
+  100% {
+    transform: translate(-64.7213592185vw, -47.022820129vh);
+  }
+}
+@keyframes anim220 {
+  100% {
+    transform: translate(-61.2835549536vw, -51.423008692vh);
+  }
+}
+@keyframes anim224 {
+  100% {
+    transform: translate(-57.5471832906vw, -55.5726695113vh);
+  }
+}
+@keyframes anim228 {
+  100% {
+    transform: translate(-53.5304474226vw, -59.4515858499vh);
+  }
+}
+@keyframes anim232 {
+  100% {
+    transform: translate(-49.2529164353vw, -63.0408600078vh);
+  }
+}
+@keyframes anim236 {
+  100% {
+    transform: translate(-44.735429963vw, -66.3230053889vh);
+  }
+}
+@keyframes anim240 {
+  100% {
+    transform: translate(-39.9999966533vw, -69.2820316917vh);
+  }
+}
+@keyframes anim244 {
+  100% {
+    transform: translate(-35.0696869337vw, -71.9035228111vh);
+  }
+}
+@keyframes anim248 {
+  100% {
+    transform: translate(-29.9685206026vw, -74.1747070689vh);
+  }
+}
+@keyframes anim252 {
+  100% {
+    transform: translate(-24.721349791vw, -76.0845194323vh);
+  }
+}
+@keyframes anim256 {
+  100% {
+    transform: translate(-19.3537378633vw, -77.6236554167vh);
+  }
+}
+@keyframes anim260 {
+  100% {
+    transform: translate(-13.891834847vw, -78.7846164089vh);
+  }
+}
+@keyframes anim264 {
+  100% {
+    transform: translate(-8.362249995vw, -79.5617461908vh);
+  }
+}
+@keyframes anim268 {
+  100% {
+    transform: translate(-2.7919220994vw, -79.9512584836vh);
+  }
+}
+@keyframes anim272 {
+  100% {
+    transform: translate(2.7920118149vw, -79.951255378vh);
+  }
+}
+@keyframes anim276 {
+  100% {
+    transform: translate(8.3623487803vw, -79.5617365594vh);
+  }
+}
+@keyframes anim280 {
+  100% {
+    transform: translate(13.8919525223vw, -78.7845992823vh);
+  }
+}
+@keyframes anim284 {
+  100% {
+    transform: translate(19.3538857994vw, -77.6236290907vh);
+  }
+}
+@keyframes anim288 {
+  100% {
+    transform: translate(24.7215418116vw, -76.0844813291vh);
+  }
+}
+@keyframes anim292 {
+  100% {
+    transform: translate(29.9687740459vw, -74.1746535294vh);
+  }
+}
+@keyframes anim296 {
+  100% {
+    transform: translate(35.0700239391vw, -71.9034488065vh);
+  }
+}
+@keyframes anim300 {
+  100% {
+    transform: translate(40.0004457508vw, -69.2819304349vh);
+  }
+}
+@keyframes anim304 {
+  100% {
+    transform: translate(44.7360280553vw, -66.3228678216vh);
+  }
+}
+@keyframes anim308 {
+  100% {
+    transform: translate(49.2537112853vw, -63.0406741325vh);
+  }
+}
+@keyframes anim312 {
+  100% {
+    transform: translate(53.5315007796vw, -59.4513358667vh);
+  }
+}
+@keyframes anim316 {
+  100% {
+    transform: translate(57.5485748204vw, -55.5723347095vh);
+  }
+}
+@keyframes anim320 {
+  100% {
+    transform: translate(61.2853871724vw, -51.4225620336vh);
+  }
+}
+@keyframes anim324 {
+  100% {
+    transform: translate(64.7237636756vw, -47.0222264458vh);
+  }
+}
+@keyframes anim328 {
+  100% {
+    transform: translate(67.8469924807vw, -42.39275481vh);
+  }
+}
+@keyframes anim332 {
+  100% {
+    transform: translate(70.6399075605vw, -37.5566872034vh);
+  }
+}
+@keyframes anim336 {
+  100% {
+    transform: translate(73.0889651791vw, -32.5375662873vh);
+  }
+}
+@keyframes anim340 {
+  100% {
+    transform: translate(75.1823130503vw, -27.3598215917vh);
+  }
+}
+@keyframes anim344 {
+  100% {
+    transform: translate(76.9098519779vw, -22.0486492345vh);
+  }
+}
+@keyframes anim348 {
+  100% {
+    transform: translate(78.2632898269vw, -16.6298876035vh);
+  }
+}
+@keyframes anim352 {
+  100% {
+    transform: translate(79.2361877464vw, -11.1298895415vh);
+  }
+}
+@keyframes anim356 {
+  100% {
+    transform: translate(79.8239986358vw, -5.5753915744vh);
+  }
+}
+@keyframes anim360 {
+  100% {
+    transform: translate(80.0240979233vw, 0.0066192762vh);
+  }
+}
+</style>
+<script>
+let sky, center
+
+function dot(i) {
+   const size = Math.round(Math.random() + 1)
+   const root = document.createElement('span')
+   root.style.top = center.y + 'px'
+   root.style.left = center.x + 'px'
+   root.classList.add('star', `size-${size}`, `axis-${i}`)
+   return root
+}
+
+function clear() {
+   sky.innerHTML = ''
+}
+
+function init() {
+   sky = document.querySelector('#sky')
+   center = {
+      x: sky.clientWidth / 2,
+      y: sky.clientHeight / 2,
+   }
+   clear()
+   for (let i = 0; i < 360; i++) sky.appendChild(dot(i))
+}
+
+window.onload = init
+
+</script>
+  <script src='/assets/modules/jquery.js'></script>
+  <script src='/assets/modules/three.js'></script>
+  <script src='/assets/modules/effect-composer.js'></script>
+  <script src='/assets/modules/render-pass.js'></script>
+  <script src='/assets/modules/shader-pass.js'></script>
+  <script src='/assets/modules/copy-shader.js'></script>
+  <script src='/assets/modules/lhp-shader.js'></script>
+  <script src='/assets/modules/unreal-bloom-pass.js'></script>
+  <script src='/assets/modules/gsap.js'></script>
+  <!--<script src='/assets/modules/scroll-tigger.js'></script>-->
+  <script src="/assets/js/main.js"></script>
+  <!--<script src="/assets/js/scroll.js"></script>-->
+  <script src="/assets/js/music-anim.js"></script>
+  </body>
+</html>
